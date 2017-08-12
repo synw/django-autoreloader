@@ -5,10 +5,10 @@ Autoreload files in browser for Django developement
 ## Install
 
    ```bash
-   pip install django-autoreload   
+   pip install django-autoreloader  
    ```
 
-Add `"autoreload",` to installed apps.
+Add `"autoreloader",` to installed apps.
 
 Add your watch list in settings.py:
 
