@@ -1,1 +1,1 @@
-recursive-include autoreload/templates *
+recursive-include autoreloader/templates *
