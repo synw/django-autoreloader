@@ -1,6 +1,6 @@
 # Django Autoreload
 
-Autoreload files in browser for Django developement
+Autoreload files in browser for Django developement with Linux
 
 ## Install
 
@@ -20,11 +20,11 @@ Add your watch list in settings.py:
   ARX = ["admin", "do/not/reload"]
   ```
   
-Include the client in templates:
+Include the client in a template:
 
    ```django
    <script type="text/javascript">
-    {% include "autoreload/client.js" %}
+      {% include "autoreloader/client.js" %}
    </script>
    ```
 
@@ -35,3 +35,8 @@ Run the Django dev server and launch the watcher in another terminal:
    ```bash
    python3 manage.py autoreload
    ```
+   
+## Credits
+
+- [Python Websockets Server](https://github.com/Pithikos/python-websocket-server)
+- [Pyinotify](https://github.com/seb-m/pyinotify)
