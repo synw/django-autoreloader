@@ -1,4 +1,4 @@
-# Django Autoreload
+# Django Autoreloader
 
 Autoreload files in browser for Django developement with Linux
 
