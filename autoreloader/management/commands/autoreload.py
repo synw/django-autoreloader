@@ -3,6 +3,7 @@ import time
 from websocket_server import WebsocketServer
 import pyinotify
 from django.core.management.base import BaseCommand
+from django.utils._os import safe_join
 from django.conf import settings
 from autoreloader.conf import WL
 
@@ -43,7 +44,7 @@ class Command(BaseCommand):
         #excl = pyinotify.ExcludeFilter(EXCLUDE)
         for d in WL:
             print("/" + d)
-            path = settings.BASE_DIR + "/" + d
+            path = safe_join(settings.BASE_DIR, d)
             #wm.add_watch(path, mask, rec=True, exclude_filter=excl)
             wm.add_watch(path, mask, rec=True)
 
