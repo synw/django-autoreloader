@@ -11,6 +11,14 @@ Install and run [django-instant](https://github.com/synw/django-instant) for the
    ```bash
    pip install django-autoreloader  
    ```
+   
+Add to settings:
+
+   ```python
+   INSTANT_SUPERUSER_CHANNELS = (
+       ("$autoreload",),
+   )
+   ```
 
 Add `"autoreloader",` to installed apps.
 
