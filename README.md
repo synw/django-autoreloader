@@ -50,14 +50,6 @@ Add your watch list in settings.py:
   # prevent paths from reloading: default is ["admin"]
   ARX = ["admin", "do/not/reload"]
   ```
-  
-Include the client in a template:
-
-   ```django
-   <script type="text/javascript">
-      {% include "autoreloader/client.js" %}
-   </script>
-   ```
 
 ## Run
 
