@@ -15,9 +15,9 @@ Install and run [django-instant](https://github.com/synw/django-instant) for the
 Add to settings:
 
    ```python
-   INSTANT_SUPERUSER_CHANNELS = (
-       ("$autoreload",),
-   )
+   INSTANT_SUPERUSER_CHANNELS = [
+       ["$autoreload"]
+   ]
    ```
 
 Add `"autoreloader",` to installed apps.
@@ -25,18 +25,7 @@ Add `"autoreloader",` to installed apps.
 Create a ``/templates/instant/handlers/$autoreload.js`` with this content:
 
    ```javascript
-   {% load autoreload_tags %}
-
-	var reload = true;
-	var x = {% noreload %};
-	for (i=0;i<x.length;i++)
-		var path = "/"+x[i];
-		if (window.location.pathname.startsWith(path) === true) {
-			reload = false;
-		}
-	if (reload === true) {
-		window.location.reload(true);
-	}
+   {% include "autoreload/autoreload.js %}
    ```
 
 ## Option
@@ -62,5 +51,5 @@ Run the Django dev server and launch the watcher in another terminal:
 ## Credits
 
 - [Pyinotify](https://github.com/seb-m/pyinotify)
-- [django-instant](https://github.com/synw/django-instant)
+- [Django Instant](https://github.com/synw/django-instant)
 
