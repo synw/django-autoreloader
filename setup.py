@@ -22,7 +22,7 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     install_requires=[
-        "websocket-server",
+        "django-instant",
         "pyinotify"
     ],
     zip_safe=False
