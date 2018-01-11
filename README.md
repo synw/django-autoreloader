@@ -24,8 +24,8 @@ Add `"autoreloader",` to installed apps.
 
 Create a ``/templates/instant/handlers/$autoreload.js`` with this content:
 
-   ```javascript
-   {% include "autoreload/autoreload.js %}
+   ```django
+   {% include "autoreload/autoreload.js" %}
    ```
 
 ## Option
